@@ -1,0 +1,7 @@
+D:\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.csprojAssemblyReference.cache
+D:\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.csproj.CoreCompileInputs.cache
+D:\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.exe.config
+D:\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.exe
+D:\NeuralNetwork\NeuralNetwork\bin\Debug\NeuralNetwork.pdb
+D:\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.exe
+D:\NeuralNetwork\NeuralNetwork\obj\Debug\NeuralNetwork.pdb
