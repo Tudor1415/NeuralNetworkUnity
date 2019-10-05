@@ -12,8 +12,8 @@ class Matrix:
             print(i)
         return f"Printed matrix of dimensions: {self.dimensions[0]}, {self.dimensions[1]} !"
 
-    def __getitem__(self, *item):
-        return self.Content[item[0]]
+    def __getitem__(self, item):
+        return self.Content[item]
 
     def __add__(self, other):
         if self.dimensions[0] == other.dimensions[0] and self.dimensions[1] == other.dimensions[1]:
@@ -39,6 +39,8 @@ class Matrix:
             print("WARNING! You can not multiply this two matricies!")
             return False
 
+    def copy(self, other):
+        self.Content = [[other[i][j] for j in range(len(other[0]))] for i in range(len(other))]
 
     def CreateMatrix(self, initValue=0):
         M = [[initValue for j in range(self.dimensions[1])] for i in range(self.dimensions[0])]
