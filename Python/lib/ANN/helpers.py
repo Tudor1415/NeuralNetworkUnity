@@ -1,7 +1,6 @@
-from ..Math.LinearAlgebra.Matrix import Matrix
-class Neuron:
+# from ..Math.LinearAlgebra.Matrix import Matrix
+class ANNNeuron:
     def __init__(self, weights, activation):
-        self.settings = settings
         self.weights = weights
         self.weightedSum = self.weightedSum()
         if activation:
@@ -26,20 +25,23 @@ class Neuron:
             r += i[1] * i[0]
         return r
 
-class Layer:
-    def __init__(self, layerType, neurons=0, activation=None, weights=[], value=0):
+class ANNLayer:
+    def __init__(self, layerType="Dense", neurons=0, activation=None, weights=[], dropoutValue=0, id=0):
         self.layerType = layerType
         self.neuronsNumber = neurons
         self.activation = activation
         self.neurons = self.getNeurons()
         self.weights = weights
+        self.id = id
 
     def getNeurons(self):
-        return [Neuron(self.weights, self.activation) for _ in range(neurons)]
+        return [ANNNeuron(self.weights, self.activation) for _ in range(self.neuronsNumber)]
 
     def getMatrixOutput(self):
-        outputMatrix = Matrix(self.neuronsNumber, 2, initValue=0)
-        return
+        return [i.output for i in self.neurons]
+
+    def __str__(self):
+        return f"The {self.id} layer has {self.neuronsNumber} neurons !"
 
 class ANN:
     def __init__(self, *layers):
@@ -50,5 +52,7 @@ class ANN:
             self.network.append(l)
 
 
-neuron1 = Neuron([[5,4],[3,2],[1,0]], activation="sigmoid")
+neuron1 = ANNNeuron([[5,4],[3,2],[1,0]], activation="sigmoid")
 print(neuron1)
+layer1 = ANNLayer(neurons = 3, weights = [[5,4],[3,2],[1,0]], activation="sigmoid")
+print(layer1)

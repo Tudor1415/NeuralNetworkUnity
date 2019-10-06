@@ -42,6 +42,9 @@ class Matrix:
     def copy(self, other):
         self.Content = [[other[i][j] for j in range(len(other[0]))] for i in range(len(other))]
 
+    def append(self, other):
+        self.Content.append(other)
+
     def CreateMatrix(self, initValue=0):
         M = [[initValue for j in range(self.dimensions[1])] for i in range(self.dimensions[0])]
         return M
