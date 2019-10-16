@@ -8,7 +8,7 @@ __version__ = "0.1"
 class Matrix:
     '''
     This class can only create matricies
-    Warning: please do not overwhelm the constructor with more then 2 dimensions
+    Warning: please do not overwhelm the constructor with more than 2 dimensions
     '''
     def __init__(self, Content=[], dims=[2,2], initValue=0):
         self.shape = dims
